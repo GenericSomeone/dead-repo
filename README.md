@@ -1,6 +1,5 @@
 TODO
 
-Fix known bugs
 
 ~~Remove unnecessary code~~ (done)
 
@@ -14,17 +13,21 @@ Recolor the support tree to a different shade of green
 
 Resprite the unit weapons
 
+Resprite support units to not be the same shape as vanilla units
+
 Add more comments
+
+Fix known bugs
 
 ABOUT
 
 This mod is dedicated to whoever made the payload feature. For some reason, very few people care about payload at the moment, and I hope that this mod will bolster the awareness of your contribution.
 
-This mod is exactly what it sounds like. It adds a few new units, many of which are based around the payload mechanic. There are also a few turrets and other returning contents that you may recognize if you were one of the few people on the planet that played Unbalance Mod in v5.
+This mod is exactly what it sounds like. It adds a few new units, many of which are based around the payload mechanic. There are also a few turrets and other returning contents that you may recognize if you were one of the few people on the planet that played Unbalance Mod in v5 (if you weren't, that just means you had real mods to play; you didn't miss out on anything).
 
 KNOWN BUGS
 
-Any existing payload units in inventories on the field will not work anymore if you load a save. However, if you drop the unit and pick it up again, it will rearm itself. I currently do not know how to fix this bug, but if you do, please reach out to me.
+Any existing payload weapons in inventories on the field will disarm itself if you load a save. However, if you drop the weapon and pick it up again, it will rearm itself. I currently do not know how to fix this bug, but if you do, please reach out to me.
 
 PLEASE NOTE
 

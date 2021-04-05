@@ -22,7 +22,6 @@ defense_rocket.backColor = Color.valueOf("40b2fb");
 defense_rocket.shootSound = Sounds.missile;
 defense_rocket.collidesTiles = false;
 
-
 const fang = extendContent(UnitType, "fang", {});
 fang.constructor = () => extend(UnitEntity, {
 	update(){
@@ -55,18 +54,6 @@ refresh(fang);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //hive
 const rocket_pod = extend(MissileBulletType, {});
 
@@ -88,7 +75,6 @@ rocket_pod.despawnEffect = Fx.flakExplosion;
 rocket_pod.hitSound = Sounds.explosionbig;
 //rocket_pod.backColor = Color.valueOf("40b2fb");
 rocket_pod.shootSound = Sounds.missile;
-
 
 const hive = extendContent(UnitType, "hive", {});
 hive.constructor = () => extend(UnitEntity, {
@@ -126,17 +112,6 @@ refresh(hive);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //stinger
 const splinter = extend(BasicBulletType, {
 	update(b){
@@ -146,7 +121,6 @@ const splinter = extend(BasicBulletType, {
 		this.super$update;
         },
 });
-
 
 splinter.damage = 1;
 splinter.speed = 4;
@@ -162,7 +136,6 @@ splinter.hitSound = Sounds.none;
 splinter.frontColor = Color.valueOf("6e7080");
 splinter.backColor = Color.valueOf("6e7080");
 splinter.shootSound = loadSound("splinter");
-
 
 const rocket_pod_ap = extend(MissileBulletType, {
 	hit(b){
@@ -216,7 +189,6 @@ const rocket_pod_ap = extend(MissileBulletType, {
         },
 });
 
-
 rocket_pod_ap.damage = 42;
 rocket_pod_ap.splashDamage = 45;
 rocket_pod_ap.splashDamageRadius = 34.4;
@@ -236,7 +208,6 @@ rocket_pod_ap.hitSound = Sounds.explosionbig;
 rocket_pod_ap.frontColor = Color.valueOf("272727");
 rocket_pod_ap.backColor = Color.valueOf("272727");
 rocket_pod_ap.shootSound = Sounds.missile;
-
 
 const stinger = extendContent(UnitType, "stinger", {});
 stinger.constructor = () => extend(UnitEntity, {

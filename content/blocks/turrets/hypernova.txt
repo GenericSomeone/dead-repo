@@ -1,0 +1,20 @@
+description: Player-controlled laser turret. Fires a concentrated beam that destroys any unit it hits. Does not work on advanced units.
+powerUse: 530
+recoilAmount: 8
+rotateSpeed: 0.35
+cooldown: 0.0015
+restitution: 0.008
+requirements:[
+  copper/17000
+  lead/16500
+  metaglass/17000
+  graphite/14500
+  titanium/17000
+  thorium/12300
+  silicon/17000
+  plastanium/12800
+  phase-fabric/13400
+  surge-alloy/16500
+]
+category: turret
+research: foreshadow

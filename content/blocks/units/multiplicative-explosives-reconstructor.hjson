@@ -1,0 +1,31 @@
+type: Reconstructor
+name: Multiplicative Explosives Reconstructor
+description: Upgrades inputted explosives to their third tier.
+size: 5
+health: 360
+constructTime: 1800
+consumes: {
+  power: 3
+    items: {
+      items: [
+        thorium/80
+	silicon/30
+	plastanium/40
+      ]
+    }
+}
+upgrades: [
+  [hive, stinger]
+  [arcturus, aldebaran]
+]
+requirements: [
+  copper/900
+  lead/650
+  silicon/450
+  graphite/300
+  titanium/350
+  plastanium/175
+  thorium/900
+]
+category: units
+research: additive-explosives-reconstructor

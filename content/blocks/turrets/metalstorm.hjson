@@ -1,0 +1,29 @@
+﻿localizedName: Metalstorm
+type: ItemTurret
+reloadTime: 15
+shootShake: 2
+range: 230
+recoilAmount: 2
+inaccuracy: 1
+shootCone: 1
+size: 3
+health: 1170
+shots: 1
+shootSound: bang
+ammoUseEffect: casing3
+targetAir: false
+targetGround: true
+requirements: [
+	copper/360
+	graphite/240
+	titanium/60
+] 
+ammoTypes: {
+	graphite: artilleryDense
+	silicon: artilleryHoming
+	pyratite: artilleryIncendiary
+	blast-compound: artilleryExplosive
+	plastanium: artilleryPlastic
+}
+research: hail
+category: turret

@@ -1,0 +1,20 @@
+﻿description: "Aquatic turret. Capable of sucking in enemies vulnerable to drowning.",
+health: 640,
+size: 2,
+placeableLiquid: true,
+targetAir: false,
+targetGround: true,
+shootCone: 5,
+shots: 5,
+spread: 1,
+inaccuracy: 0,
+powerUse: 2,
+range: 240,
+requirements: [
+	silicon/240
+	metaglass/200
+	graphite/180
+	titanium/60
+] 
+research: parallax
+category: turret

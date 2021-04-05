@@ -1,0 +1,35 @@
+type: mech
+hitSize: 11.31
+health: 50
+range: 360
+speed: 0
+rotateSpeed: 360
+baseRotateSpeed: 360
+flying: false
+rotateShooting: false
+weapons: [
+{
+  shots: 25
+  reload: 999999
+  shootSound: none
+  shootCone: 360
+  ignoreRotation: true
+  x: 0
+  y: 0
+  shootEffect: none
+  mirror: false 
+  bullet: {
+    type: MissileBulletType
+    lifetime: 0
+    damage: 42
+    splashDamage: 45
+    splashDamageRadius: 34.4
+    hittable: false
+    maxRange: 360
+    collidesAir: true
+    despawnEffect: none
+    hitEffect: none
+  }
+}
+]
+research: hive

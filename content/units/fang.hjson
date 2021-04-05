@@ -1,0 +1,34 @@
+type: mech
+hitSize: 5.65685
+health: 50
+range: 480
+speed: 0
+rotateSpeed: 360
+baseRotateSpeed: 360
+flying: false
+rotateShooting: false
+weapons: [
+{
+  shots: 1
+  reload: 999999
+  shootSound: none
+  shootCone: 360
+  ignoreRotation: true
+  x: 0
+  y: 0
+  shootEffect: none
+  mirror: false 
+  bullet: {
+    type: MissileBulletType
+    lifetime: 0
+    damage: 300
+    buildingDamageMultiplier: 0
+    hittable: false
+    maxRange: 480
+    collidesAir: true
+    despawnEffect: none
+    hitEffect: none
+  }
+}
+]
+research: explosives-factory

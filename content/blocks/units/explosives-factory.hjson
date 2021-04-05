@@ -1,0 +1,32 @@
+type: UnitFactory
+name: Explosives Factory
+description: Produces payload explosives usable by cargo units.
+health: 360
+size: 3
+consumes: {
+  power: 1.2
+}
+plans: [
+  {
+    unit: fang
+    time: 1200
+    requirements: [
+      silicon/20
+      blast-compound/15
+    ]
+  }
+  {
+    unit: pollux
+    time: 600
+    requirements: [
+      coal/30
+    ]
+  }
+]
+requirements: [
+  copper/110
+  lead/190
+  silicon/80
+]
+research: air-factory
+category: units

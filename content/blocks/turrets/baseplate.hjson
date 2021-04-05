@@ -1,0 +1,82 @@
+﻿reloadTime: 11
+shootShake: 2
+range: 256
+recoilAmount: 3
+spread: 0
+shootCone: 30
+size: 3
+health: 960
+shots: 1
+shootSound: bang
+ammoUseEffect: casing3
+rotateSpeed: 10
+targetAir: true
+targetGround: true
+/*ammoTypes: {
+	pyratite: {
+		type : BasicBulletType
+		damage: 45
+		height: 12
+		width : 6			
+		speed: 10
+		lifetime: 25.6
+		ammoMultiplier: 2
+		reloadMultiplier: 1
+		smokeEffect: shootBigSmoke
+		backColor: fc7b03
+		frontColor: ffffef
+		splashDamageRadius: 36
+		splashDamage: 25
+		keepVelocity: true
+		pierce: false
+		hitEffect: flakExplosionBig
+		despawnEffect: flakExplosionBig
+		status : {
+			name: Napalm
+			speedMultiplier: 0.48
+			damageMultiplier: 1
+			armorMultiplier: 0.8
+			reloadMultiplier: 1
+			damage: 1.36
+			effect: ballfire
+		}
+		statusDuration: 1800
+		fragBullets: 12
+		fragBullet: {
+			type : BasicBulletType
+			damage: 1
+			height: 2
+			width : 1			
+			speed: 10
+			lifetime: 2.4
+			backColor: fc7b03
+			frontColor: ffffef
+			keepVelocity: true
+			pierce: false
+			hitEffect: ballfire
+			despawnEffect: ballfire
+			status : {
+				name: NapalmSecondary
+				speedMultiplier: 0.48
+				damageMultiplier: 1
+				armorMultiplier: 0.8
+				reloadMultiplier: 1
+				damage: 1.36
+				effect: ballfire
+			}
+			statusDuration: 1800
+		}
+		
+	}
+}
+*/
+requirements: [
+	copper/550
+	graphite/300
+	titanium/125
+	silicon/300
+	thorium/250
+	plastanium/260
+]
+category: turret
+research: cyclone

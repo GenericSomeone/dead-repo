@@ -1,0 +1,30 @@
+type: Reconstructor
+name: Additive Explosives Reconstructor
+description: Upgrades inputted explosives to their second tier.
+size: 3
+health: 360
+constructTime: 600
+consumes: {
+  power: 3
+    items: {
+      items: [
+        blast-compound/40
+	pyratite/40
+	silicon/20
+      ]
+    }
+}
+upgrades: [
+  [fang, hive]
+  [pollux, arcturus]
+]
+requirements: [
+  copper/200
+  lead/120
+  silicon/125
+  graphite/35
+  titanium/35
+  plastanium/45
+]
+category: units
+research: explosives-factory

@@ -1,0 +1,34 @@
+type: mech
+hitSize: 8
+health: 50
+range: 40
+speed: 0
+rotateSpeed: 360
+baseRotateSpeed: 360
+flying: false
+rotateShooting: false
+weapons: [
+{
+  shots: 8
+  reload: 999999
+  shootSound: none
+  shootCone: 360
+  ignoreRotation: true
+  x: 0
+  y: 0
+  shootEffect: none
+  mirror: false 
+  bullet: {
+    type: BombBulletType
+    lifetime: 0
+    damage: 0
+    splashDamage: 85
+    splashDamageRadius: 57.6
+    hittable: false
+    maxRange: 40
+    despawnEffect: none
+    hitEffect: none
+  }
+}
+]
+research: pollux

@@ -4,6 +4,16 @@ Fix known bugs
 
 Remove unnecessary code
 
+Remove new lines that do nothing
+
+All missiles and bombs need resprites and cells (but especially t2 and t3 bombs)
+
+T1, T2, and T3 support units need cells
+
+Recolor the support tree to a different shade of green
+
+Resprite the unit weapons
+
 Add more comments
 
 ABOUT
@@ -18,7 +28,9 @@ Any existing payload units in inventories on the field will not work anymore if 
 
 PLEASE NOTE
 
-This mod is currently in beta. As such, code, sprites, and balancing will be unstable for now. They will be fixed in the future.
+This mod is currently in beta (and largely unfinished and unpolished). As such, code, sprites, and balancing will be unstable for now. They will be fixed in the future. As I am currently the only contributor, changes are expected to take a long time.
+
+~~While the mod is technically playable in its current state, you probably shouldn't because it's janky as heck~~
 
 CREDITS
 

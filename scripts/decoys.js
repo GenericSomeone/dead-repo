@@ -1,5 +1,6 @@
 ﻿const refresh = require("libraries/refresh")
 
+//flock
 const flock = extendContent(UnitType, "flock", {
 	flying: true,
 	hitSize: 8,
@@ -43,6 +44,8 @@ flock.internal_timer = 0;
 refresh(flock);
 
 
+
+//stampede
 const stampede = extendContent(UnitType, "stampede", {
 	flying: false,
 	hitSize: 8,

@@ -2,11 +2,11 @@ TODO
 
 Fix known bugs
 
-Remove unnecessary code
+~~Remove unnecessary code~~ (done)
 
-Remove new lines that do nothing
+~~Remove new lines that do nothing~~ (done)
 
-All missiles and bombs need resprites and cells (but especially t2 and t3 bombs)
+All missiles and bombs need resprites and cells (but especially t2 and t3 bombs) (in progress...)
 
 T1, T2, and T3 support units need cells
 

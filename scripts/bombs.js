@@ -62,18 +62,6 @@ refresh(pollux);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //arcturus
 const frag_cluster = extend(BombBulletType, {});
 
@@ -86,10 +74,7 @@ frag_cluster.homingRange = 0;
 frag_cluster.lifetime = 20;
 frag_cluster.width = 8;
 frag_cluster.height = 8;
-//frag_cluster.trailEffect = Fx.fireSmoke;
 frag_cluster.keepVelocity = true;
-//frag_cluster.trailChance = 0.5;
-//frag_cluster.trailColor = Color.valueOf("40b2fb")
 frag_cluster.hitEffect = Fx.flakExplosion;
 frag_cluster.despawnEffect = Fx.flakExplosion;
 frag_cluster.hitSound = Sounds.explosionbig;
@@ -114,10 +99,7 @@ fire_bomb_cluster.homingRange = 0;
 fire_bomb_cluster.lifetime = 60;
 fire_bomb_cluster.width = 16;
 fire_bomb_cluster.height = 16;
-//fire_bomb_cluster.trailEffect = Fx.fireSmoke;
 fire_bomb_cluster.keepVelocity = true;
-//fire_bomb_cluster.trailChance = 0.5;
-//fire_bomb_cluster.trailColor = Color.valueOf("40b2fb")
 fire_bomb_cluster.hitEffect = Fx.flakExplosionBig;
 fire_bomb_cluster.despawnEffect = Fx.flakExplosionBig;
 fire_bomb_cluster.hitSound = Sounds.explosionbig;
@@ -166,16 +148,6 @@ arcturus.constructor = () => extend(UnitEntity, {
 });
 arcturus.armed_status = false;
 refresh(arcturus);
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -246,10 +218,7 @@ nuclear_bomb.homingRange = 0;
 nuclear_bomb.lifetime = 60;
 nuclear_bomb.width = 24;
 nuclear_bomb.height = 24;
-//nuclear_bomb.trailEffect = Fx.fireSmoke;
 nuclear_bomb.keepVelocity = true;
-//nuclear_bomb.trailChance = 0.5;
-//nuclear_bomb.trailColor = Color.valueOf("40b2fb")
 nuclear_bomb.hitEffect = mushroom_cloud;
 nuclear_bomb.despawnEffect = explosion;
 nuclear_bomb.hitSound = loadSound("atomic_bomb_LOUD");

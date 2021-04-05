@@ -1,3 +1,11 @@
+TODO
+
+Fix known bugs
+
+Remove unnecessary code
+
+Add more comments
+
 ABOUT
 
 This mod is dedicated to whoever made the payload feature. For some reason, very few people care about payload at the moment, and I hope that this mod will bolster the awareness of your contribution.

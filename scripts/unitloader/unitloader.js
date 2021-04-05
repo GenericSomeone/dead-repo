@@ -1,6 +1,6 @@
 ﻿const refresh = require("libraries/refresh")
 
-
+//plover
 const plover = extendContent(UnitType, "plover", {
 	flying: true,
 	hitSize: 8,
@@ -17,14 +17,7 @@ plover.constructor = () => extend(UnitEntity, {});
 
 
 
-
-
-
-
-
-
-
-
+//bee
 const bee = extendContent(UnitType, "bee", {
 	flying: true,
 	hitSize: 12,
@@ -41,14 +34,7 @@ bee.constructor = () => extend(PayloadUnit, {});
 
 
 
-
-
-
-
-
-
-
-
+//raven
 const shieldbreaker_frag = extend(LaserBoltBulletType, {
 	height: 8,
 	lifetime: 8,
@@ -122,18 +108,7 @@ raven.weapons.addAll(shield_buster);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+//hornet
 const pod = extend(BasicBulletType, {
 	height: 54,
 	width: 36,
@@ -200,14 +175,7 @@ hornet.weapons.addAll(decoy_cannon);
 
 
 
-
-
-
-
-
-
-
-
+//egret
 const blast_wave = new Effect(15, e => {
 	Draw.color(Color.white, Pal.lancerLaser, e.fin());
 	Lines.stroke(8 * e.fout());
@@ -412,17 +380,7 @@ egret.custom_timer = 0;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//factory scripts
 Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-plover"),
  60 * 25,
  ItemStack.with(Items.silicon, 10)));

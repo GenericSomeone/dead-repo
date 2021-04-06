@@ -1,5 +1,6 @@
 TODO
 
+~~Purge all sprites from other mods left in for testing purposes~~ (done)
 
 ~~Remove unnecessary code~~ (done)
 

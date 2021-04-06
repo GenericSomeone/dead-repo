@@ -39,6 +39,8 @@ This mod is currently in beta (and largely unfinished and unpolished). As such, 
 CREDITS
 
 Although I technically created most of the code and sprites myself, I owe the creators of Exotic Mod, Pixelcraft, and Progressed Materials a huge thanks for providing me with sprite and code examples (still working on it).
+Unused turret blocks were from Advance Content. I originally planned to use them as placeholders so that I could sprite the turrets before spriting the blocks, but this idea was scrapped, and the blocks remained unused. The blocks were subsequently removed in a later version, but old versions may still have them.
+
 Special thanks to Anuke for creating this game and providing the source code.
 
 And of course, a big thank you for taking the time to play my mod, and goodnight.

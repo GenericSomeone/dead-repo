@@ -8,13 +8,15 @@ TODO
 
 All missiles and bombs need resprites and cells (but especially t2 and t3 bombs) (in progress...)
 
+Baseplate needs resprite (this is a v5 weapon sprite for a turret mech but looks too much like a cyclone in turret form)
+
 T1, T2, and T3 support units need cells
 
 Recolor the support tree to a different shade of green
 
-Resprite the unit weapons
+Add weapon sprite for support t4 and resprite support t5's weapon
 
-Resprite support units to not be the same shape as vanilla units
+Resprite support t3 and support t5 to not be the same shape as mega and oct (respectively)
 
 Add more comments
 

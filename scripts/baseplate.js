@@ -20,7 +20,7 @@ const fireshotfrag = extend(BasicBulletType, {
     keepVelocity: true,
     pierce: false,
     status: napalm,
-    statusDuration: 1800
+    statusDuration: 1800,
     width: 1,
     height: 2,
     backColor: Color.valueOf("fc7b03"),

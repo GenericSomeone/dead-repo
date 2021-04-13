@@ -1,7 +1,7 @@
 ﻿const refresh = require("libraries/refresh")
 
 //plover
-const plover = extendContent(UnitType, "plover", {
+const plover = extend(UnitType, "plover", {
 	flying: true,
 	hitSize: 8,
 	health: 50,
@@ -18,7 +18,7 @@ plover.constructor = () => extend(UnitEntity, {});
 
 
 //bee
-const bee = extendContent(UnitType, "bee", {
+const bee = extend(UnitType, "bee", {
 	flying: true,
 	hitSize: 12,
 	health: 100,
@@ -70,7 +70,7 @@ const shieldbreaker = extend(LaserBoltBulletType, {
 });
 shieldbreaker.shield_sound = Sounds.corexplode;
 
-const shield_buster = extendContent(Weapon, "unbalance-mod-rebirth-shield_buster", {
+const shield_buster = extend(Weapon, "unbalance-mod-rebirth-shield_buster", {
 	reload: 15,
 	x: 8,
 	y: -8,
@@ -82,7 +82,7 @@ const shield_buster = extendContent(Weapon, "unbalance-mod-rebirth-shield_buster
 	bullet: shieldbreaker,
 });
 
-const raven = extendContent(UnitType, "raven", {
+const raven = extend(UnitType, "raven", {
 	flying: true,
 	hitSize: 16,
 	health: 350,
@@ -136,7 +136,7 @@ const pod = extend(BasicBulletType, {
 });
 pod.scaler = 1
 
-const decoy_cannon = extendContent(Weapon, "unbalance-mod-rebirth-decoy_cannon", {
+const decoy_cannon = extend(Weapon, "unbalance-mod-rebirth-decoy_cannon", {
 	reload: 45,
 	x: 0,
 	y: 0,
@@ -149,7 +149,7 @@ const decoy_cannon = extendContent(Weapon, "unbalance-mod-rebirth-decoy_cannon",
 	bullet: pod,
 });
 
-const hornet = extendContent(UnitType, "hornet", {
+const hornet = extend(UnitType, "hornet", {
 	flying: true,
 	hitSize: 28,
 	health: 5500,
@@ -241,7 +241,7 @@ const hook = extend(PointBulletType, {
         },
 });
 
-const pirate_hook = extendContent(Weapon, "unbalance-mod-rebirth-pirate_hook", {
+const pirate_hook = extend(Weapon, "unbalance-mod-rebirth-pirate_hook", {
 	reload: 1,
 	x: 0,
 	y: 0,
@@ -260,7 +260,6 @@ let charge = ["placeholder"];
 for(let i = 1; i <= 9; i++){
     charge.push(loadSound("charge_" + i));
 }
-//I have no idea how this works; ask QMelZ
 
 const egret = extendContent(UnitType, "egret", {
 	flying: true,
@@ -382,13 +381,17 @@ Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(Vars.content.getByName(Cont
  ItemStack.with(Items.silicon, 10)));
 
 Blocks.additiveReconstructor.upgrades.add(Seq.with(Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-plover"), 
-Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-bee")).toArray(UnitType));
+Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-bee")
+).toArray(UnitType));
 
 Blocks.multiplicativeReconstructor.upgrades.add(Seq.with(Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-bee"), 
-Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-raven")).toArray(UnitType));
+Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-raven")
+).toArray(UnitType));
 
 Blocks.exponentialReconstructor.upgrades.add(Seq.with(Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-raven"), 
-Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-hornet")).toArray(UnitType));
+Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-hornet")
+).toArray(UnitType));
 
 Blocks.tetrativeReconstructor.upgrades.add(Seq.with(Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-hornet"), 
-Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-egret")).toArray(UnitType));
+Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-egret")
+).toArray(UnitType));

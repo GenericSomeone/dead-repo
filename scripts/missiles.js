@@ -1,25 +1,26 @@
 ﻿const refresh = require("libraries/refresh")
 
 //fang
-const defense_rocket = extend(MissileBulletType, {});
+const defense_rocket = extend(MissileBulletType, {
+	damage: 300
+	buildingDamageMultiplier: 0,
+	speed: 4,
+	homingPower: 0.1,
+	homingRange: 80,
+	lifetime: 120,
+	width: 12,
+	height: 40,
+	keepVelocity: true,
+	trailChance: 0.5,
+	trailColor: Color.valueOf("40b2fb")
+	hitEffect: Fx.flakExplosion,
+	despawnEffect: Fx.flakExplosion,
+	hitSound: Sounds.explosionbig,
+	backColor: Color.valueOf("40b2fb"),
+	shootSound: Sounds.missile,
+	collidesTiles: false,
+});
 
-defense_rocket.damage = 300
-defense_rocket.buildingDamageMultiplier = 0;
-defense_rocket.speed = 4;
-defense_rocket.homingPower = 0.1;
-defense_rocket.homingRange = 80;
-defense_rocket.lifetime = 120;
-defense_rocket.width = 12;
-defense_rocket.height = 40;
-defense_rocket.keepVelocity = true;
-defense_rocket.trailChance = 0.5;
-defense_rocket.trailColor = Color.valueOf("40b2fb")
-defense_rocket.hitEffect = Fx.flakExplosion;
-defense_rocket.despawnEffect = Fx.flakExplosion;
-defense_rocket.hitSound = Sounds.explosionbig;
-defense_rocket.backColor = Color.valueOf("40b2fb");
-defense_rocket.shootSound = Sounds.missile;
-defense_rocket.collidesTiles = false;
 
 const fang = extendContent(UnitType, "fang", {});
 fang.constructor = () => extend(UnitEntity, {
@@ -54,23 +55,24 @@ refresh(fang);
 
 
 //hive
-const rocket_pod = extend(MissileBulletType, {});
+const rocket_pod = extend(MissileBulletType, {
+	damage: 42
+	splashDamage: 45,
+	splashDamageRadius: 34.4,
+	speed: 4,
+	homingPower: 0.1,
+	homingRange: 80,
+	lifetime: 90,
+	width: 8,
+	height: 8,
+	keepVelocity: true,
+	trailChance: 0.5,
+	hitEffect: Fx.flakExplosion,
+	despawnEffect: Fx.flakExplosion,
+	hitSound: Sounds.explosionbig,
+	shootSound: Sounds.missile,
+});
 
-rocket_pod.damage = 42
-rocket_pod.splashDamage = 45;
-rocket_pod.splashDamageRadius = 34.4;
-rocket_pod.speed = 4;
-rocket_pod.homingPower = 0.1;
-rocket_pod.homingRange = 80;
-rocket_pod.lifetime = 90;
-rocket_pod.width = 8;
-rocket_pod.height = 8;
-rocket_pod.keepVelocity = true;
-rocket_pod.trailChance = 0.5;
-rocket_pod.hitEffect = Fx.flakExplosion;
-rocket_pod.despawnEffect = Fx.flakExplosion;
-rocket_pod.hitSound = Sounds.explosionbig;
-rocket_pod.shootSound = Sounds.missile;
 
 const hive = extendContent(UnitType, "hive", {});
 hive.constructor = () => extend(UnitEntity, {
@@ -110,6 +112,20 @@ refresh(hive);
 
 //stinger
 const splinter = extend(BasicBulletType, {
+	damage: 1,
+	speed: 4,
+	pierce: true,
+	lifetime: 60,
+	width: 4,
+	height: 16,
+	keepVelocity: true,
+	hitEffect: Fx.unitDrop,
+	despawnEffect: Fx.unitDrop,
+	hitSound: Sounds.none,
+	frontColor: Color.valueOf("6e7080"),
+	backColor: Color.valueOf("6e7080"),
+	shootSound: loadSound("splinter"),
+	
 	update(b){
 		Units.nearbyEnemies(b.team, b.x - 4, b.y - 4, 8, 8, u =>{
 			u.health -= splinter.damage;
@@ -118,21 +134,27 @@ const splinter = extend(BasicBulletType, {
         },
 });
 
-splinter.damage = 1;
-splinter.speed = 4;
-splinter.pierce = true;
-splinter.lifetime = 60;
-splinter.width = 4;
-splinter.height = 16;
-splinter.keepVelocity = true;
-splinter.hitEffect = Fx.unitDrop;
-splinter.despawnEffect = Fx.unitDrop;
-splinter.hitSound = Sounds.none;
-splinter.frontColor = Color.valueOf("6e7080");
-splinter.backColor = Color.valueOf("6e7080");
-splinter.shootSound = loadSound("splinter");
 
 const rocket_pod_ap = extend(MissileBulletType, {
+	damage: 42,
+	splashDamage: 45,
+	splashDamageRadius: 34.4,
+	speed: 4,
+	homingPower: 0.1,
+	homingRange: 80,
+	lifetime: 90,
+	width: 8,
+	height: 8,
+	keepVelocity: true,
+	trailChance: 0.5,
+	trailColor: Color.valueOf("272727")
+	hitEffect: Fx.flakExplosion,
+	despawnEffect: Fx.flakExplosion,
+	hitSound: Sounds.explosionbig,
+	frontColor: Color.valueOf("272727"),
+	backColor: Color.valueOf("272727"),
+	shootSound: Sounds.missile,
+	
 	hit(b){
 		Units.nearbyEnemies(b.team, b.x - 4, b.y - 4, 8, 8, u =>{
 			let splinters = u.armor;
@@ -184,24 +206,6 @@ const rocket_pod_ap = extend(MissileBulletType, {
         },
 });
 
-rocket_pod_ap.damage = 42;
-rocket_pod_ap.splashDamage = 45;
-rocket_pod_ap.splashDamageRadius = 34.4;
-rocket_pod_ap.speed = 4;
-rocket_pod_ap.homingPower = 0.1;
-rocket_pod_ap.homingRange = 80;
-rocket_pod_ap.lifetime = 90;
-rocket_pod_ap.width = 8;
-rocket_pod_ap.height = 8;
-rocket_pod_ap.keepVelocity = true;
-rocket_pod_ap.trailChance = 0.5;
-rocket_pod_ap.trailColor = Color.valueOf("272727")
-rocket_pod_ap.hitEffect = Fx.flakExplosion;
-rocket_pod_ap.despawnEffect = Fx.flakExplosion;
-rocket_pod_ap.hitSound = Sounds.explosionbig;
-rocket_pod_ap.frontColor = Color.valueOf("272727");
-rocket_pod_ap.backColor = Color.valueOf("272727");
-rocket_pod_ap.shootSound = Sounds.missile;
 
 const stinger = extendContent(UnitType, "stinger", {});
 stinger.constructor = () => extend(UnitEntity, {

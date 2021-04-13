@@ -65,8 +65,5 @@ const baseplate = extendContent(ItemTurret, "baseplate", {
     rotateSpeed: 10,
     targetAir: true,
     targetGround: true,
-    ammo(
-        Items.pyratite, fireshot, 
-    ),
 });
-
+baseplate.ammo(Items.pyratite, fireshot)

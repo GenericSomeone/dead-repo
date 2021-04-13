@@ -21,8 +21,8 @@ const fireshotfrag = extend(BasicBulletType, {
     pierce: false,
     status: napalm,
     statusDuration: 1800
-    bulletWidth: 1,
-    bulletHeight: 2,
+    width: 1,
+    height: 2,
     backColor: Color.valueOf("fc7b03"),
     frontColor: Color.valueOf("ffffef"),
 });

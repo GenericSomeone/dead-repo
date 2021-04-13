@@ -11,62 +11,62 @@ napalm.damage = 1.36;
 napalm.effect = Fx.ballfire;
 
 //put frag bullet first
-const fireshotfrag = extend(BasicBulletType, {});
+const fireshotfrag = extend(BasicBulletType, {
+    speed = 10;
+    damage = 1;
+    hitEffect = Fx.ballfire;
+    despawnEffect = Fx.ballfire;
+    lifetime = 2.4;
+    keepVelocity = true;
+    pierce = false;
+    status = napalm;
+    statusDuration = 1800
+    bulletWidth = 1;
+    bulletHeight = 2;
+    backColor = Color.valueOf("fc7b03");
+    frontColor = Color.valueOf("ffffef");
+});
 
-//frag stats
-fireshotfrag.speed = 10;
-fireshotfrag.damage = 1;
-fireshotfrag.hitEffect = Fx.ballfire;
-fireshotfrag.despawnEffect = Fx.ballfire;
-fireshotfrag.lifetime = 2.4;
-fireshotfrag.keepVelocity = true;
-fireshotfrag.pierce = false;
-fireshotfrag.status = napalm;
-fireshotfrag.statusDuration = 1800
-fireshotfrag.bulletWidth = 1;
-fireshotfrag.bulletHeight = 2;
-fireshotfrag.backColor = Color.valueOf("fc7b03");
-fireshotfrag.frontColor = Color.valueOf("ffffef");
+const fireshot = extend(BasicBulletType, {
+    damage = 45;
+    height = 12;
+    width = 6;
+    speed = 10;
+    lifetime = 25.6;
+    ammoMultiplier = 2;
+    reloadMultiplier = 1;
+    smokeEffect = Fx.shootBigSmoke;
+    backColor = Color.valueOf("fc7b03");
+    frontColor = Color.valueOf("ffffef");
+    splashDamageRadius = 36;
+    splashDamage = 25;
+    keepVelocity = true;
+    pierce = false;
+    hitEffect = Fx.flakExplosionBig;
+    despawnEffect = Fx.flakExplosionBig;
+    status = napalm;
+    statusDuration = 1800;
+    fragBullets = 12;
+    fragBullet = fireshotfrag;
+});
 
-const fireshot = extend(BasicBulletType, {});
-fireshot.damage = 45;
-fireshot.height = 12;
-fireshot.width = 6;
-fireshot.speed = 10;
-fireshot.lifetime = 25.6;
-fireshot.ammoMultiplier = 2;
-fireshot.reloadMultiplier = 1;
-fireshot.smokeEffect = Fx.shootBigSmoke;
-fireshot.backColor = Color.valueOf("fc7b03");
-fireshot.frontColor = Color.valueOf("ffffef");
-fireshot.splashDamageRadius = 36;
-fireshot.splashDamage = 25;
-fireshot.keepVelocity = true;
-fireshot.pierce = false;
-fireshot.hitEffect = Fx.flakExplosionBig;
-fireshot.despawnEffect = Fx.flakExplosionBig;
-fireshot.status = napalm;
-fireshot.statusDuration = 1800;
-fireshot.fragBullets = 12;
-fireshot.fragBullet = fireshotfrag;
-
-
-const baseplate = extendContent(ItemTurret, "baseplate", {});
-baseplate.reloadTime = 11;
-baseplate.shootShake = 2;
-baseplate.range = 256;
-baseplate.recoilAmount = 3;
-baseplate.spread = 0;
-baseplate.shootCone = 30;
-baseplate.size = 3;
-baseplate.health = 960;
-baseplate.shots = 1;
-baseplate.shootSound = Sounds.bang;
-baseplate.ammoUseEffect = Fx.casing3;
-baseplate.rotateSpeed = 10;
-baseplate.targetAir = true;
-baseplate.targetGround = true;
-baseplate.ammo(
-    Items.pyratite, fireshot, 
-);
+const baseplate = extendContent(ItemTurret, "baseplate", {
+    reloadTime = 11;
+    shootShake = 2;
+    range = 256;
+    recoilAmount = 3;
+    spread = 0;
+    shootCone = 30;
+    size = 3;
+    health = 960;
+    shots = 1;
+    shootSound = Sounds.bang;
+    ammoUseEffect = Fx.casing3;
+    rotateSpeed = 10;
+    targetAir = true;
+    targetGround = true;
+    ammo(
+        Items.pyratite, fireshot, 
+    );
+});
 

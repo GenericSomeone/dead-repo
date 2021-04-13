@@ -256,15 +256,11 @@ const pirate_hook = extendContent(Weapon, "unbalance-mod-rebirth-pirate_hook", {
 });
 
 //we need to put our custom sounds here and store them to variables for later use, as they do not correspond to any of the default fields
-const charge_1 = loadSound("charge_1");
-const charge_2 = loadSound("charge_2");
-const charge_3 = loadSound("charge_3");
-const charge_4 = loadSound("charge_4");
-const charge_5 = loadSound("charge_5");
-const charge_6 = loadSound("charge_6");
-const charge_7 = loadSound("charge_7");
-const charge_8 = loadSound("charge_8");
-const charge_9 = loadSound("charge_9");
+let charge = ["placeholder"];
+for(let i = 1; i <= 9; i++){
+    charge.push(loadSound("charge_" + i));
+}
+//I have no idea how this works; ask QMelZ
 
 const egret = extendContent(UnitType, "egret", {
 	flying: true,

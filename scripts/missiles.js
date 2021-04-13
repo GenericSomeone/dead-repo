@@ -2,7 +2,7 @@
 
 //fang
 const defense_rocket = extend(MissileBulletType, {
-	damage: 300
+	damage: 300,
 	speed: 4,
 	homingPower: 0.1,
 	homingRange: 80,
@@ -55,7 +55,7 @@ refresh(fang);
 
 //hive
 const rocket_pod = extend(MissileBulletType, {
-	damage: 42
+	damage: 42,
 	splashDamage: 45,
 	splashDamageRadius: 34.4,
 	speed: 4,

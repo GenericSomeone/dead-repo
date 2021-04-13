@@ -11,7 +11,7 @@ const defense_rocket = extend(MissileBulletType, {
 	height: 40,
 	keepVelocity: true,
 	trailChance: 0.5,
-	trailColor: Color.valueOf("40b2fb")
+	trailColor: Color.valueOf("40b2fb"),
 	hitEffect: Fx.flakExplosion,
 	despawnEffect: Fx.flakExplosion,
 	hitSound: Sounds.explosionbig,
@@ -146,7 +146,7 @@ const rocket_pod_ap = extend(MissileBulletType, {
 	height: 8,
 	keepVelocity: true,
 	trailChance: 0.5,
-	trailColor: Color.valueOf("272727")
+	trailColor: Color.valueOf("272727"),
 	hitEffect: Fx.flakExplosion,
 	despawnEffect: Fx.flakExplosion,
 	hitSound: Sounds.explosionbig,

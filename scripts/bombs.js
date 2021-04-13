@@ -1,29 +1,29 @@
 ﻿const refresh = require("libraries/refresh")
 
 //pollux
-const fire_bomb = extend(BombBulletType, {});
-
-fire_bomb.damage = 0;
-fire_bomb.splashDamage = 85;
-fire_bomb.splashDamageRadius = 57.6;
-fire_bomb.speed = 1;
-fire_bomb.homingPower = 0;
-fire_bomb.homingRange = 0;
-fire_bomb.lifetime = 60;
-fire_bomb.width = 16;
-fire_bomb.height = 16;
-fire_bomb.keepVelocity = true;
-fire_bomb.hitEffect = Fx.flakExplosionBig;
-fire_bomb.despawnEffect = Fx.flakExplosionBig;
-fire_bomb.hitSound = Sounds.explosionbig;
-fire_bomb.backColor = Color.valueOf("fc7b03");
-fire_bomb.shootSound = Sounds.bang;
-fire_bomb.collidesTiles = true;
-fire_bomb.collidesGround = true;
-fire_bomb.collidesAir = false;
-fire_bomb.incendChance = 1;
-fire_bomb.incendAmount = 5;
-fire_bomb.incendSpread = 5;
+const fire_bomb = extend(BombBulletType, {
+	damage: 0,
+	splashDamage: 85,
+	splashDamageRadius: 57.6,
+	speed: 1,
+	homingPower: 0,
+	homingRange: 0,
+	lifetime: 60,
+	width: 16,
+	height: 16,
+	keepVelocity: true,
+	hitEffect: Fx.flakExplosionBig,
+	despawnEffect: Fx.flakExplosionBig,
+	hitSound: Sounds.explosionbig,
+	backColor: Color.valueOf("fc7b03"),
+	shootSound: Sounds.bang,
+	collidesTiles: true,
+	collidesGround: true,
+	collidesAir: false,
+	incendChance: 1,
+	incendAmount: 5,
+	incendSpread: 5,
+});
 
 
 const pollux = extendContent(UnitType, "pollux", {});
@@ -60,56 +60,56 @@ refresh(pollux);
 
 
 //arcturus
-const frag_cluster = extend(BombBulletType, {});
+const frag_cluster = extend(BombBulletType, {
+	damage: 0,
+	splashDamage: 30,
+	splashDamageRadius: 24,
+	speed: 3,
+	homingPower: 0,
+	homingRange: 0,
+	lifetime: 20,
+	width: 8,
+	height: 8,
+	keepVelocity: true,
+	hitEffect: Fx.flakExplosion,
+	despawnEffect: Fx.flakExplosion,
+	hitSound: Sounds.explosionbig,
+	backColor: Color.valueOf("fc7b03"),
+	shootSound: Sounds.bang,
+	collidesTiles: true,
+	collidesGround: true,
+	collidesAir: false,
+	incendChance: 1,
+	incendAmount: 3,
+	incendSpread: 3,
+});
 
-frag_cluster.damage = 0;
-frag_cluster.splashDamage = 30;
-frag_cluster.splashDamageRadius = 24;
-frag_cluster.speed = 3;
-frag_cluster.homingPower = 0;
-frag_cluster.homingRange = 0;
-frag_cluster.lifetime = 20;
-frag_cluster.width = 8;
-frag_cluster.height = 8;
-frag_cluster.keepVelocity = true;
-frag_cluster.hitEffect = Fx.flakExplosion;
-frag_cluster.despawnEffect = Fx.flakExplosion;
-frag_cluster.hitSound = Sounds.explosionbig;
-frag_cluster.backColor = Color.valueOf("fc7b03");
-frag_cluster.shootSound = Sounds.bang;
-frag_cluster.collidesTiles = true;
-frag_cluster.collidesGround = true;
-frag_cluster.collidesAir = false;
-frag_cluster.incendChance = 1;
-frag_cluster.incendAmount = 3;
-frag_cluster.incendSpread = 3;
 
-
-const fire_bomb_cluster = extend(BombBulletType, {});
-
-fire_bomb_cluster.damage = 0;
-fire_bomb_cluster.splashDamage = 85;
-fire_bomb_cluster.splashDamageRadius = 57.6;
-fire_bomb_cluster.speed = 3;
-fire_bomb_cluster.homingPower = 0;
-fire_bomb_cluster.homingRange = 0;
-fire_bomb_cluster.lifetime = 60;
-fire_bomb_cluster.width = 16;
-fire_bomb_cluster.height = 16;
-fire_bomb_cluster.keepVelocity = true;
-fire_bomb_cluster.hitEffect = Fx.flakExplosionBig;
-fire_bomb_cluster.despawnEffect = Fx.flakExplosionBig;
-fire_bomb_cluster.hitSound = Sounds.explosionbig;
-fire_bomb_cluster.backColor = Color.valueOf("fc7b03");
-fire_bomb_cluster.shootSound = Sounds.bang;
-fire_bomb_cluster.collidesTiles = true;
-fire_bomb_cluster.collidesGround = true;
-fire_bomb_cluster.collidesAir = false;
-fire_bomb_cluster.incendChance = 1;
-fire_bomb_cluster.incendAmount = 5;
-fire_bomb_cluster.incendSpread = 5;
-fire_bomb_cluster.fragBullet = frag_cluster;
-fire_bomb_cluster.fragBullets = 8;
+const fire_bomb_cluster = extend(BombBulletType, {
+	damage: 0,
+	splashDamage: 85,
+	splashDamageRadius: 57.6,
+	speed: 3,
+	homingPower: 0,
+	homingRange: 0,
+	lifetime: 60,
+	width: 16,
+	height: 16,
+	keepVelocity: true,
+	hitEffect: Fx.flakExplosionBig,
+	despawnEffect: Fx.flakExplosionBig,
+	hitSound: Sounds.explosionbig,
+	backColor: Color.valueOf("fc7b03"),
+	shootSound: Sounds.bang,
+	collidesTiles: true,
+	collidesGround: true,
+	collidesAir: false,
+	incendChance: 1,
+	incendAmount: 5,
+	incendSpread: 5,
+	fragBullet: frag_cluster,
+	fragBullets: 8,
+});
 
 
 const arcturus = extendContent(UnitType, "arcturus", {});
@@ -204,26 +204,27 @@ const mushroom_cloud = new Effect(600, e => {
 });
 
 
-const nuclear_bomb = extend(BombBulletType, {});
-
-nuclear_bomb.damage = 0;
-nuclear_bomb.splashDamage = 7000;
-nuclear_bomb.splashDamageRadius = 160;
-nuclear_bomb.speed = 1;
-nuclear_bomb.homingPower = 0;
-nuclear_bomb.homingRange = 0;
-nuclear_bomb.lifetime = 60;
-nuclear_bomb.width = 24;
-nuclear_bomb.height = 24;
-nuclear_bomb.keepVelocity = true;
-nuclear_bomb.hitEffect = mushroom_cloud;
-nuclear_bomb.despawnEffect = explosion;
-nuclear_bomb.hitSound = loadSound("atomic_bomb_LOUD");
-nuclear_bomb.backColor = Color.valueOf("6e7080");
-nuclear_bomb.shootSound = Sounds.bang;
-nuclear_bomb.collidesTiles = true;
-nuclear_bomb.collidesGround = true;
-nuclear_bomb.collidesAir = false;
+//we have both effects separate because both effects trigger at the time of impact regardless
+const nuclear_bomb = extend(BombBulletType, {
+	damage: 0,
+	splashDamage: 7000,
+	splashDamageRadius: 160,
+	speed: 1,
+	homingPower: 0,
+	homingRange: 0,
+	lifetime: 60,
+	width: 24,
+	height: 24,
+	keepVelocity: true,
+	hitEffect: mushroom_cloud,
+	despawnEffect: explosion,
+	hitSound: loadSound("atomic_bomb_LOUD"),
+	backColor: Color.valueOf("6e7080"),
+	shootSound: Sounds.bang,
+	collidesTiles: true,
+	collidesGround: true,
+	collidesAir: false,
+});
 
 
 const aldebaran = extendContent(UnitType, "aldebaran", {});

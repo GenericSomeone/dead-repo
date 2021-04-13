@@ -3,7 +3,6 @@
 //fang
 const defense_rocket = extend(MissileBulletType, {
 	damage: 300
-	buildingDamageMultiplier: 0,
 	speed: 4,
 	homingPower: 0.1,
 	homingRange: 80,

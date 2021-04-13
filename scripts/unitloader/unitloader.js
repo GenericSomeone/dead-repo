@@ -341,23 +341,23 @@ egret.constructor = () => extend(PayloadUnit, {
 					});
 					charge_line.at(this.x, this.y, u.x, u.y);
 					if (this.blast_wave_charge < 333){
-						charge_1.at(this.x, this.y);
+						charge[1].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 667) {
-						charge_2.at(this.x, this.y);
+						charge[2].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 1000) {
-						charge_3.at(this.x, this.y);
+						charge[3].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 1333) {
-						charge_4.at(this.x, this.y);
+						charge[4].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 1667) {
-						charge_5.at(this.x, this.y);
+						charge[5].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 2000) {
-						charge_6.at(this.x, this.y);
+						charge[6].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 2333) {
-						charge_7.at(this.x, this.y);
+						charge[7].at(this.x, this.y);
 					} else if (this.blast_wave_charge < 2667) {
-						charge_8.at(this.x, this.y);
+						charge[8].at(this.x, this.y);
 					} else {
-						charge_9.at(this.x, this.y);
+						charge[9].at(this.x, this.y);
 					}
 				}
 			});

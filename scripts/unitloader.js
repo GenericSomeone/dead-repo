@@ -184,7 +184,7 @@ const blast_wave = new Effect(15, e => {
 
 const hooked = new StatusEffect("hooked");
 hooked.speedMultiplier = 0;
-hooked.reloadMultiplier = 0;
+hooked.reloadMultiplier = 0.5;
 hooked.effect = Fx.none;
 
 const hook_chain = new Effect(2, (e) => {
@@ -233,7 +233,7 @@ const hook = extend(PointBulletType, {
 					u.x = b.x;
 					u.y = b.y;
 					if (u.team != b.team){
-						u.apply(hooked, 3); // only applies status effect on enemy units
+						u.apply(hooked, 2); // only applies status effect on enemy units
 					}
 				}
 			}

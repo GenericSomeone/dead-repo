@@ -337,11 +337,11 @@ egret.constructor = () => extend(PayloadUnit, {
 					//the effect is placed in here so that the coordinates of the unit can be obtained
 					const charge_line = new Effect(10, e => {
 						Draw.color(Color.valueOf("81d249"), Color.valueOf("68922c"), e.fin());
-						Lines.stroke(1200 * e.fout() * charge_increase);
+						Lines.stroke((this.blast_wave_requirement * e.fout() * charge_increase)/1200);
       						Lines.line(e.x, e.y, u.x, u.y);
 
 						Draw.color(Color.white, Pal.lancerLaser, e.fin());
-						Lines.stroke(this.blast_wave_charge * e.fout() * charge_increase);
+						Lines.stroke((this.blast_wave_charge * e.fout() * charge_increase)/1200);
       						Lines.line(e.x, e.y, u.x, u.y);
 					});
 					charge_line.at(this.x, this.y, u.x, u.y);

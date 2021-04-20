@@ -331,7 +331,7 @@ egret.constructor = () => extend(PayloadUnit, {
 					//this if statement limits the charge that a unit can provide if it gets too close
 					if (charge_increase > 12) {
 						charge_increase = 12;
-					},
+					}
 					u.health -= charge_increase;
 					this.blast_wave_charge += charge_increase;
 					//the effect is placed in here so that the coordinates of the unit can be obtained

@@ -184,7 +184,7 @@ const blast_wave = new Effect(15, e => {
 
 const hooked = new StatusEffect("hooked");
 hooked.speedMultiplier = 0;
-hooked.reloadMultiplier = 0.5;
+hooked.reloadMultiplier = 1;
 hooked.effect = Fx.none;
 
 const hook_chain = new Effect(2, (e) => {
@@ -296,11 +296,11 @@ egret.constructor = () => extend(PayloadUnit, {
 		}
 
 		if (this.blast_wave_requirement == null){
-			this.blast_wave_requirement = 3000;
+			this.blast_wave_requirement = 6000;
 		}
 
 		if (this.blast_wave_charge >= this.blast_wave_requirement) {
-			let blast_wave_range = 480;
+			let blast_wave_range = 360;
 			Units.nearbyEnemies(this.team, this.x - blast_wave_range, this.y - blast_wave_range, blast_wave_range * 2, blast_wave_range * 2, u =>{
 				const blast_line = new Effect(30, e => {
 						Draw.color(Color.white, Pal.lancerLaser, e.fin());
@@ -322,38 +322,44 @@ egret.constructor = () => extend(PayloadUnit, {
 		}
 
 		if (this.custom_timer >= 15) {
-			Units.nearbyEnemies(this.team, this.x - 240, this.y - 240, 480, 480, u =>{
+			let blast_wave_charge_range = 160;
+			Units.nearbyEnemies(this.team, this.x - blast_wave_charge_range, this.y - blast_wave_charge_range, 2 * blast_wave_charge_range, 2 * blast_wave_charge_range, u =>{
 				//this is done to prevent charging from dead units
 				if (u.health > 0){
 					let target_distance = Mathf.dst(this.x, this.y, u.x, u.y);
-					u.health -= ((250 - target_distance) / 15);
-					this.blast_wave_charge += ((250 - target_distance) / 15);
+					let charge_increase = ((250 - target_distance) / 15);
+					//this if statement limits the charge that a unit can provide if it gets too close
+					if (charge_increase > 12) {
+						charge_increase = 12;
+					},
+					u.health -= charge_increase;
+					this.blast_wave_charge += charge_increase;
 					//the effect is placed in here so that the coordinates of the unit can be obtained
 					const charge_line = new Effect(10, e => {
 						Draw.color(Color.valueOf("81d249"), Color.valueOf("68922c"), e.fin());
-						Lines.stroke((1200 * e.fout()) / target_distance);
+						Lines.stroke(1200 * e.fout() * charge_increase);
       						Lines.line(e.x, e.y, u.x, u.y);
 
 						Draw.color(Color.white, Pal.lancerLaser, e.fin());
-						Lines.stroke((this.blast_wave_charge * e.fout()) / (2.5 * target_distance) );
+						Lines.stroke(this.blast_wave_charge * e.fout()) * charge_increase);
       						Lines.line(e.x, e.y, u.x, u.y);
 					});
 					charge_line.at(this.x, this.y, u.x, u.y);
-					if (this.blast_wave_charge < 333){
+					if (this.blast_wave_charge < (this.blast_wave_requirement/9) ){
 						charge[1].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 667) {
+					} else if (this.blast_wave_charge < (2 * (this.blast_wave_requirement/9) ) ) {
 						charge[2].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 1000) {
+					} else if (this.blast_wave_charge < (3 * (this.blast_wave_requirement/9) ) ) {
 						charge[3].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 1333) {
+					} else if (this.blast_wave_charge < (4 * (this.blast_wave_requirement/9) ) ) {
 						charge[4].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 1667) {
+					} else if (this.blast_wave_charge < (5 * (this.blast_wave_requirement/9) ) ) {
 						charge[5].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 2000) {
+					} else if (this.blast_wave_charge < (6 * (this.blast_wave_requirement/9) ) ) {
 						charge[6].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 2333) {
+					} else if (this.blast_wave_charge < (7 * (this.blast_wave_requirement/9) ) ) {
 						charge[7].at(this.x, this.y);
-					} else if (this.blast_wave_charge < 2667) {
+					} else if (this.blast_wave_charge < (8 * (this.blast_wave_requirement/9) ) ) {
 						charge[8].at(this.x, this.y);
 					} else {
 						charge[9].at(this.x, this.y);

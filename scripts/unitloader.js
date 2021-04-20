@@ -314,7 +314,7 @@ egret.constructor = () => extend(PayloadUnit, {
    					Fill.circle(e.x, e.y, e.fout() * 24);
 				});
 				blast_wave_hit.at(u.x, u.y);
-				u.health -= 750;
+				u.health -= 400;
 			});
 			blast_wave.at(this.x, this.y);
 			Sounds.laserblast.at(this.x, this.y);
@@ -375,9 +375,6 @@ egret.constructor = () => extend(PayloadUnit, {
 refresh(egret);
 egret.weapons.addAll(pirate_hook);
 egret.defaultController = () => extend(DefenderAI, {});
-egret.blast_wave_charge = 0;
-egret.blast_wave_requirement = 300;
-egret.custom_timer = 0;
 
 
 

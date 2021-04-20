@@ -341,7 +341,7 @@ egret.constructor = () => extend(PayloadUnit, {
       						Lines.line(e.x, e.y, u.x, u.y);
 
 						Draw.color(Color.white, Pal.lancerLaser, e.fin());
-						Lines.stroke(this.blast_wave_charge * e.fout()) * charge_increase);
+						Lines.stroke(this.blast_wave_charge * e.fout() * charge_increase);
       						Lines.line(e.x, e.y, u.x, u.y);
 					});
 					charge_line.at(this.x, this.y, u.x, u.y);

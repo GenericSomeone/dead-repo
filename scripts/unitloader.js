@@ -126,6 +126,7 @@ const pod = extend(BasicBulletType, {
 
 	update(b){
 		if(b.timer.get(1, 5)){
+			//deploys decoys so as long as the bullet has not despawned
   			var new_unit = Vars.content.getByName(ContentType.unit, "unbalance-mod-rebirth-flock").spawn(b.team, b.x, b.y);
 			new_unit.rotation = Math.random() * 360;
 
@@ -218,6 +219,7 @@ const hook = extend(PointBulletType, {
 
 	despawned(b){
 		hook_head.at(b.x, b.y, b.rotation());
+		//the bullet sprite does not show up as it is a point bullet, so an effect is used to make the hook instead
 		Units.nearby(b.x - 16, b.y - 16, 32, 32, cons(u =>{
 
 			let floor_tile = Vars.world.tileWorld(Mathf.floor(b.x), Mathf.floor(b.y));
@@ -299,6 +301,7 @@ egret.constructor = () => extend(PayloadUnit, {
 			this.blast_wave_requirement = 6000;
 		}
 
+		//blast wave release code
 		if (this.blast_wave_charge >= this.blast_wave_requirement) {
 			let blast_wave_range = 360;
 			Units.nearbyEnemies(this.team, this.x - blast_wave_range, this.y - blast_wave_range, blast_wave_range * 2, blast_wave_range * 2, u =>{
@@ -321,12 +324,14 @@ egret.constructor = () => extend(PayloadUnit, {
 			this.blast_wave_charge = 0;	
 		}
 
+		//blast wave charge code
 		if (this.custom_timer >= 15) {
 			let blast_wave_charge_range = 160;
 			Units.nearbyEnemies(this.team, this.x - blast_wave_charge_range, this.y - blast_wave_charge_range, 2 * blast_wave_charge_range, 2 * blast_wave_charge_range, u =>{
 				//this is done to prevent charging from dead units
 				if (u.health > 0){
 					let target_distance = Mathf.dst(this.x, this.y, u.x, u.y);
+					//closer enemy units will charge the blast wave faster
 					let charge_increase = ((250 - target_distance) / 15);
 					//this if statement limits the charge that a unit can provide if it gets too close
 					if (charge_increase > 12) {
@@ -340,6 +345,7 @@ egret.constructor = () => extend(PayloadUnit, {
 						Lines.stroke((this.blast_wave_requirement * e.fout() * charge_increase)/2000);
       						Lines.line(e.x, e.y, u.x, u.y);
 
+						//the whiteness in the line indicates how close to full the blast wave has been charged
 						Draw.color(Color.white, Pal.lancerLaser, e.fin());
 						Lines.stroke((this.blast_wave_charge * e.fout() * charge_increase)/2000);
       						Lines.line(e.x, e.y, u.x, u.y);

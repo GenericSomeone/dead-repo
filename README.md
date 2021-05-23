@@ -6,9 +6,9 @@
 
 - [X] Remove new lines that do nothing
 
-- [ ] All missiles and bombs need resprites and cells (but especially t2 and t3 bombs) (in progress...)
+- [X] All missiles and bombs need resprites and cells (but especially t2 and t3 bombs)
 
-- [ ] Baseplate needs resprite (this is a v5 weapon sprite for a turret mech but looks too much like a cyclone in turret form)
+- [X] Baseplate needs resprite (this is a v5 weapon sprite for a turret mech but looks too much like a cyclone in turret form)
 
 - [ ] T1, T2, and T3 support units need cells
 
